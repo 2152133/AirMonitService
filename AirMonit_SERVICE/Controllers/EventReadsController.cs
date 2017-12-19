@@ -16,7 +16,7 @@ namespace AirMonit_SERVICE.Controllers
 
         SqlConnection conn = new SqlConnection("Server=8ed5b81c-f02d-4b07-8a1b-a82d01211ad0.sqlserver.sequelizer.com;Database=db8ed5b81cf02d4b078a1ba82d01211ad0;User ID=ymapojbsswihswrv;Password=eeXwreGgDWzeEK2hVnytXksn7gTeN5x3rirFr7i252gT58mh8nDDCwb2TKyjtCzG;");
 
-        // GET: api/SensorReads
+        // GET: api/EventReads
         public IEnumerable<Event> GetAllSensors()
         {
             List<Event> lista = new List<Event>();
@@ -61,7 +61,7 @@ namespace AirMonit_SERVICE.Controllers
             return lista;
         }
 
-        // GET: api/SensorReads/5
+        // GET: api/EventReads/5
         public IHttpActionResult GetSensorById(int id)
         {
             Event natureEvent = null;
@@ -112,7 +112,7 @@ namespace AirMonit_SERVICE.Controllers
             }
         }
 
-        // POST: api/sensors --> faz INSERT na database
+        // POST: api/EventReads --> faz INSERT na database
         public IHttpActionResult Post([FromBody]Event value)
         {
             try
@@ -153,7 +153,7 @@ namespace AirMonit_SERVICE.Controllers
 
         }
 
-        // PUT: api/sensors/5
+        // PUT: api/EventReads/5
         public IHttpActionResult Put(int id, [FromBody]Event value)
         {
             try
@@ -193,7 +193,7 @@ namespace AirMonit_SERVICE.Controllers
             }
         }
 
-        // DELETE: api/sensors/5
+        // DELETE: api/EventReads/5
         public IHttpActionResult Delete(int id)
         {
             try

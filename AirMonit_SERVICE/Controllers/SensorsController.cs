@@ -15,7 +15,7 @@ namespace AirMonit_SERVICE.Controllers
     {
         SqlConnection conn = new SqlConnection("Server=8ed5b81c-f02d-4b07-8a1b-a82d01211ad0.sqlserver.sequelizer.com;Database=db8ed5b81cf02d4b078a1ba82d01211ad0;User ID=ymapojbsswihswrv;Password=eeXwreGgDWzeEK2hVnytXksn7gTeN5x3rirFr7i252gT58mh8nDDCwb2TKyjtCzG;");
 
-        // GET: api/Sensor
+        // GET: api/Sensors
         public IEnumerable<SensorParameter> GetAllSensors()
         {
             List<SensorParameter> lista = new List<SensorParameter>();
@@ -61,7 +61,7 @@ namespace AirMonit_SERVICE.Controllers
             return lista;
         }
 
-        // GET: api/SensorReads/5 (sensor_id)
+        // GET: api/Sensors/5 (sensor_id)
         public IHttpActionResult GetSensorById(int id)
         {
             List<SensorParameter> sensors = new List<SensorParameter>();
@@ -115,7 +115,7 @@ namespace AirMonit_SERVICE.Controllers
             }
         }
 
-        // DELETE: api/sensors/5
+        // DELETE: api/Sensors/5
         public IHttpActionResult Delete(int id)
         {
             try

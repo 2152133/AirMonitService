@@ -110,8 +110,8 @@ namespace AirMonit_SERVICE.Controllers
                 return Ok(sensor);
             }
         }
-        
-        // DELETE: api/sensors/5
+
+        // DELETE: api/SensorReads/5
         public IHttpActionResult Delete(int id)
         {
             try
